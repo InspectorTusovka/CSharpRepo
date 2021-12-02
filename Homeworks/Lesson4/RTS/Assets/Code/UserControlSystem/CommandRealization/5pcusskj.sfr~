@@ -1,0 +1,9 @@
+using UnityEngine;
+public class ProduceUnitCommand : IProduceUnitCommand
+{
+    public GameObject UnitPrefab => _unitPrefab;
+    [InjectAssets("WeakUnit")] private GameObject _unitPrefab;
+}
+public class AttackCommand : IAttackCommand { }
+public class HoldCommand : IHoldCommand { }
+public class PatrolCommand : IPatrolCommand { }
